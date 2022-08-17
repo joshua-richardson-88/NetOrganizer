@@ -1,0 +1,16 @@
+version: '3'
+
+networks:
+  web:
+    external: true
+
+services:
+  netorganizer:
+    build: ./
+    restart: unless-stopped
+    networks:
+      - 'web'
+    labels:
+      - 'traefik.http.routers.web.rule=Host(`netorganizer.cursedtale.com`)'
+      - 'traefik.http.routers.web.tls=true'
+      - 'traefik.http.routers.web.tls.certresolver=lets-encrypt'
