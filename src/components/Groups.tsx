@@ -47,7 +47,7 @@ const Content: React.FC<ContentProps> = ({ activeId, makeActive }) => {
           </button>
         )}
       </div>
-      <div className='overflow-y-auto flex-1 scrollbar scrollbar-light flex flex-row flex-wrap p-4 gap-4'>
+      <div className='overflow-y-auto flex-1 scrollbar scrollbar-light flex flex-row flex-wrap p-4 gap-6'>
         {groups &&
           groups.map((group) => (
             <GroupCard key={group.id} {...group} refetch={getAllAgain} />

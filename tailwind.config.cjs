@@ -24,7 +24,11 @@ const ProjectUtilities = plugin(({ addUtilities }) => {
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        card: '1fr 36px',
+      },
+    },
   },
   plugins: [ProjectUtilities],
 }

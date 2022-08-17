@@ -96,7 +96,7 @@ const GroupCard: React.FC<CardProps> = ({ id, title, refetch }) => {
           )}
         </button>
       </div>
-      <div className='p-4 h-full flex flex-col relative'>
+      <div className='p-4 h-[25rem] grid grid-rows-card relative gap-4'>
         {links == null ? (
           <div className='flex-1'></div>
         ) : (
@@ -105,7 +105,7 @@ const GroupCard: React.FC<CardProps> = ({ id, title, refetch }) => {
         <button
           type='button'
           onClick={() => setShowNewForm(true)}
-          className='w-full px-6 py-2 border-2 border-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black/30 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
+          className='w-full h-fit px-6 py-2 border-2 border-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black/30 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
         >
           Add Link
         </button>

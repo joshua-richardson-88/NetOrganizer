@@ -21,7 +21,7 @@ const LinkList: React.FC<Props> = ({ data, editLink, onSuccess }) => {
   }, [isSuccess, onSuccess])
 
   return (
-    <div className='flex-1 overflow-auto scrollbar flex flex-col gap-1'>
+    <div className='overflow-auto scrollbar flex flex-col gap-1'>
       {data.map((link) => (
         <div
           key={link.id}
