@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+passage-auth {
+  --passage-body-text-color: #eee;
+  --app-text: #000;
+  --passage-header-text-color: #eee;
+  --passage-primary-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    opacity: 0;
+    width: 8px;
+    height: 100%;
+    background-color: inherit;
+  }
+  .scrollbar:hover::-webkit-scrollbar {
+    opacity: 1;
+  }
+  .scrollbar:hover::-webkit-scrollbar-track {
+    background-color: inherit;
+  }
+  .scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    border-radius: 2rem;
+  }
+  .scrollbar-light:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(115, 115, 115, 0.5);
+    border-radius: 2rem;
+  }
+  .scrollbar:hover::-webkit-scrollbar-button {
+    display: none;
+  }
+}

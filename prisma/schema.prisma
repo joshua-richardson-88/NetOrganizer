@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+model Collection {
+  id     String @id @default(cuid())
+  title  String
+  userId String
+  groups Group[]
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+model Group {
+  id           String @id @default(cuid())
+  title        String 
+  links        Link[]
+  collectionId String 
+  collection   Collection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+}
+model Link {
+  id      String @id @default(cuid())
+  title   String 
+  url     String 
+  notes   String 
+  groupId String 
+  group   Group @relation(fields: [groupId], references: [id], onDelete: Cascade)
+}
+model User {
+  id            String    @id @default(cuid())
+  passageId     String    @unique
+  name          String?
+  email         String?
+  phone         String?
+  collections   Collection[]
+}
