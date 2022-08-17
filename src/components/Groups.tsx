@@ -41,7 +41,7 @@ const Content: React.FC<ContentProps> = ({ activeId, makeActive }) => {
           <button
             type='button'
             onClick={onAddGroup}
-            className='ml-4 mt-1 bg-black p-2 rounded-lg hover:bg-neutral-900'
+            className='ml-4 mt-1 w-8 bg-black p-2 rounded-lg hover:bg-neutral-900'
           >
             <PlusIcon size={4} />
           </button>
